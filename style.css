@@ -26,9 +26,7 @@ header{
 
 .search h1 {
     line-height: 30px;
-   
 }
-
 
 input{
     border: 1px solid #55cbfa;
@@ -53,3 +51,4 @@ button {
     line-height: 50%;
     margin: 5px 5px 5px 0;
 }
+
