@@ -1,49 +1,51 @@
-header{
-    font-size: 60px;
-    height: 200px;
+* {
+    text-align: center;
+    justify-content: center;
+}
+
+body {
+    background-image: url('../images/camp-cafe-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 1440px 1000px;
+}
+
+header {
+    font-family: 'Damion', cursive;
+    font-size: 45px;
     width: 100%;
     text-align: center;
     margin-top: 0;
 }
-    
-
-
-
-.container {
-    display: flex;
-    flex-direction: row;
-    max-width: 100%;
-    height: 200px;
-    
-}
 
 .search {
-    padding: 25px;
-    background-color: #f5f6fa;
+    justify-content: center;
+    /* padding: 25px; */
+    background-color: transparent;
     width: 100%;
-    ;
 }
 
-.search h1 {
+/* .search h1 {
     line-height: 30px;
-}
+} */
 
-input{
-    border: 1px solid #55cbfa;
-    border-radius: 5px;
-    height: 100px;
-    width: 100%;
+input {
+    border: white;
+    border-radius: 50px;
+    height: 60px;
+    width: 25%;
+    font-size: 18px;
+    margin-right: 10px;
 }
-
 
 button {
     border: none;
-    border-radius: 5px;
-    background-color: #3eb12f;
+    border-radius: 25px;
+    background-color: purple;
     transition-duration: .4s;
-    width: 250px;
+    font-size: 20px;
+    color: white;
+    width: 70px;
     height: auto;
-
 }
 
 .row {
