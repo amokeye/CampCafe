@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url('../images/camp-cafe-bg.jpg');
+    background-image: url('../images/camp-cafe-bg-v2.jpg');
     background-repeat: no-repeat;
     background-size: 1440px 1000px;
 }
@@ -19,32 +19,26 @@ header {
 
 .search {
     justify-content: center;
-    /* padding: 25px; */
     background-color: transparent;
     width: 100%;
 }
 
-/* .search h1 {
-    line-height: 30px;
-} */
-
 input {
     border: white;
     border-radius: 50px;
-    height: 60px;
-    width: 25%;
-    font-size: 18px;
-    margin-right: 10px;
+    height: 30px;
+    width: 20%;
+    font-size: 15px;
+    
 }
 
 button {
     border: none;
-    border-radius: 25px;
-    background-color: purple;
+    background-color: transparent;
     transition-duration: .4s;
     font-size: 20px;
-    color: white;
-    width: 70px;
+    color: purple;
+    width: 50px;
     height: auto;
 }
 
