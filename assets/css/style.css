@@ -1,6 +1,5 @@
 * {
     text-align: center;
-    justify-content: center;
 }
 
 body {
@@ -9,30 +8,37 @@ body {
     background-size: 1440px 1000px;
 }
 
-header {
+.site-title h1 {
     font-family: 'Damion', cursive;
-    font-size: 45px;
+    font-size: 80px;
     width: 100%;
     text-align: center;
-    margin-top: 0;
+    margin-bottom: 5px;
 }
 
+.camp-header h1 {
+    font-family: 'Damion', cursive;
+    text-align: left;
+    font-size: 40px;
+    padding-left: 20px;
+}
+
+
 .search {
-    justify-content: center;
     background-color: transparent;
-    width: 100%;
+    margin: auto auto;
+    width: auto;
 }
 
 input {
     border: white;
     border-radius: 50px;
     height: 30px;
-    width: 20%;
-    font-size: 15px;
-    
+    width: 250px;
+    font-size: 15px;    
 }
 
-button {
+.searchBtn {
     border: none;
     background-color: transparent;
     transition-duration: .4s;
@@ -42,9 +48,45 @@ button {
     height: auto;
 }
 
+.btn {
+    background-color: transparent;
+    border-radius: 25px;
+    margin-right: 20px;
+    font-size: 18px;
+    transition-duration: 0.4s;
+}
+
+.btn:hover {
+    background-color: rgb(254, 170, 25);
+    color: white;
+}
+
 .row {
     display: flex;
-    line-height: 50%;
-    margin: 5px 5px 5px 0;
+    margin: 40px 10px 20px 10px;
+    justify-content: space-around;
 }
+
+.containers {
+    background-color:white;
+    border-radius: 35px;
+    width: 90%;
+    padding: 10px 10px 0 20px;
+    opacity: .8;
+}
+
+.map { 
+    justify-items: center;
+}
+
+h3 {
+    font-size: 20px;
+    font-style: bold;
+    text-align: left;
+}
+
+p {
+    text-align: left;
+}
+
 

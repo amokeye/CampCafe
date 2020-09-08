@@ -1,5 +1,4 @@
 var searchInputEl = document.querySelector(".search-input");
-var inputLocation = "bodega bay";
 var searchBtnEl = document.querySelector(".searchBtn");
 
 var getRestaurants = function(input) {
