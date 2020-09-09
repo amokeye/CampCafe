@@ -59,6 +59,7 @@ input {
 .btn:hover {
     background-color: rgb(254, 170, 25);
     color: white;
+    font-style: italic;
 }
 
 .row {
