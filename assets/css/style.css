@@ -83,8 +83,8 @@ input {
     background-color:white;
     border-radius: 35px;
     width: 90%;
-    padding: 10px 10px 0 20px;
-    opacity: .8;
+    opacity: .85;
+    padding-bottom: 20px;
 }
 
 .map { 
@@ -95,10 +95,35 @@ h3 {
     font-size: 20px;
     font-style: bold;
     text-align: left;
+    padding-top: 10px;
+    padding-left: 20px;
 }
 
 p {
     text-align: left;
 }
 
+.list-group li {
+    text-align: left;
+    font-size: 15px;
+    margin-right: auto;
+    font-weight: bold;
+}
 
+#resto-list {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+a {
+    color: purple;
+}
+span {
+    color: green;
+    text-align: right;
+}
+
+a:hover {
+    text-decoration: none;
+    color: orange;
+}
