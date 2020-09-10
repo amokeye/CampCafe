@@ -6,6 +6,8 @@ body {
     background-image: url('../images/camp-cafe-bg-v2.jpg');
     background-repeat: no-repeat;
     background-size: 1440px 1000px;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
 .site-title h1 {
@@ -46,6 +48,15 @@ input {
     color: purple;
     width: 50px;
     height: auto;
+}
+
+.loader img {
+    width: 80px;
+    height: auto;;
+}
+
+.hide {
+    display: none;
 }
 
 .btn {
