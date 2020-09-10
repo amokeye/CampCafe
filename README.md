@@ -42,4 +42,4 @@ Once user clicks on the Github URL website link, the website will be deployed in
 ## Future Improvments:
 
 * After deployment, we would like to gather a more comprehensive list of campgrounds, including BLM. 
-* We would to make it more mobile friendly.
+* We would like to make it more mobile friendly.
