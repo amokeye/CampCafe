@@ -18,8 +18,9 @@ The app website is used to help users find campgrounds within all 50 states and 
 
 * Yelp API,         Version 12.68.1
 * TomTom API,       Version 10.55
-* Bitspi Air Pullution API  Version 1.0
-* National Park Services API Version 1.0
+* Bitspi Air Pullution API,  Version 1.0
+* National Park Services API, Version 1.0
+* Open Weather API,   Version 1.0 
 
 
 
@@ -37,3 +38,8 @@ Click on the Github URL website link to be directed to the app website.
 ## Deployment Instructions:
 
 Once user clicks on the Github URL website link, the website will be deployed in the user's browser window.
+
+## Future Improvments:
+
+* After deployment, we would like to gather a more comprehensive list of campgrounds, including BLM. 
+* We would like to make it more mobile friendly.
