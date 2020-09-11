@@ -1,61 +1,51 @@
-var searchInputEl = document.querySelector(".search-input");
-var inputLocation = "bodega bay";
+var loaderEl = document.querySelector(".loader");
 var searchBtnEl = document.querySelector(".searchBtn");
+var searchInputEl = document.querySelector(".search-input");
 
-var getRestaurants = function(input) {
+var getCamps = function(input) {
+    //URl request
+     var npsApi = "https://developer.nps.gov/api/v1/campgrounds?q="+ input +"&api_key=16qnixGPCRxcuKRsBRxu9yl0P6xo3CbdECaehB9V&limit=10";
+    //make URL request
+    console.log(input)
+    loaderEl.removeAttribute("class", "hide");
 
-    var yelpApi = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + input + "&categories=restaurant&limit=5";
-
-    var myHeaders = new Headers();
-    myHeaders.append("Authorization", "Bearer Vi0q_KlyjE3_Gpjr2rrAaqjTph5U1XC1MAUy05QestL0bgs04XW3hUjSIwaJ4Gi6YOChOX3gi00XxGo4s4efLcykIAEZGk5YO_RG2ARsYNoOTInWdrGoFiq_B6ZSX3Yx");
-    myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("Acces", "");
-
-
-    var requestOptions = {
-        method: 'GET',
-        headers: myHeaders,
-        redirect: 'follow'
-    };
-
-    // Yelp fetch
-    fetch(yelpApi, requestOptions)
-    .then(response => response.json())
-    .then(function(data){displayYelpResults(data)})
-    .catch(error => console.log('error', error));
- 
+    fetch(npsApi)
+    .then(function(response){
+        if (response.ok) {
+            response.json().then(function(data){
+                displayactivityResults(data);
+            });
+        } else {
+            loaderEl.setAttribute("class", "hide");
+            alert("Error: " + response.statusText);
+        }
+    })
+    .catch(function(error){
+        loaderEl.setAttribute("class", "hide");
+        alert("Unable to connect to OpenWeather");
+    });
 };
 
-var displayYelpResults = function(data) {
-    var restaurants = data.businesses;
-    console.log(restaurants);
-    for (var i=0; i < restaurants.length; i++) {
-        var distance = convertToMiles(restaurants[i].distance);
-        var name = restaurants[i].name;
-        console.log(name + " " + distance + "mi");
+var displayactivityResults = function(location) {
+    var activities= location.data;
+    loaderEl.setAttribute("class", "hide");
+    for (var i=0; i<activities.length; i++){
+        var activity = activities[i]
+        console.log(activity);
     }
 };
 
-var displayRestaurantInfo = function(info) {
-
-}
-
-var convertToMiles =  function(meters) {
-    return (meters/1609.34).toFixed(2);
-}
-
 var formSubmitHandler = function(event) {
     event.preventDefault();
+    
     var searchLocation = searchInputEl.value.trim();
-    console.log(searchLocation);
-
-    if (searchLocation) {
-        getRestaurants(searchLocation)
+    
+    if (searchLocation) {   
+        getCamps(searchLocation);
         searchInputEl.value = "";
     } else {
         alert("Please enter a location to search campgrounds!");
     }
-    
 };
 
 searchBtnEl.addEventListener("click", formSubmitHandler);

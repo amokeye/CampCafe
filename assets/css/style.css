@@ -1,38 +1,46 @@
 * {
     text-align: center;
-    justify-content: center;
 }
 
 body {
     background-image: url('../images/camp-cafe-bg-v2.jpg');
     background-repeat: no-repeat;
     background-size: 1440px 1000px;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
-header {
+.site-title h1 {
     font-family: 'Damion', cursive;
-    font-size: 45px;
+    font-size: 80px;
     width: 100%;
     text-align: center;
-    margin-top: 0;
+    margin-bottom: 5px;
 }
 
+.camp-header h1 {
+    font-family: 'Damion', cursive;
+    text-align: left;
+    font-size: 40px;
+    padding-left: 20px;
+}
+
+
 .search {
-    justify-content: center;
     background-color: transparent;
-    width: 100%;
+    margin: auto auto;
+    width: auto;
 }
 
 input {
     border: white;
     border-radius: 50px;
     height: 30px;
-    width: 20%;
-    font-size: 15px;
-    
+    width: 250px;
+    font-size: 15px;    
 }
 
-button {
+.searchBtn {
     border: none;
     background-color: transparent;
     transition-duration: .4s;
@@ -42,9 +50,80 @@ button {
     height: auto;
 }
 
-.row {
-    display: flex;
-    line-height: 50%;
-    margin: 5px 5px 5px 0;
+.loader img {
+    width: 80px;
+    height: auto;;
 }
 
+.hide {
+    display: none;
+}
+
+.btn {
+    background-color: transparent;
+    border-radius: 25px;
+    margin-right: 20px;
+    font-size: 18px;
+    transition-duration: 0.4s;
+}
+
+.btn:hover {
+    background-color: rgb(254, 170, 25);
+    color: white;
+    font-style: italic;
+}
+
+.row {
+    display: flex;
+    margin: 40px 10px 20px 10px;
+    justify-content: space-around;
+}
+
+.containers {
+    background-color:white;
+    border-radius: 35px;
+    width: 90%;
+    opacity: .85;
+    padding-bottom: 20px;
+}
+
+.map { 
+    justify-items: center;
+}
+
+h3 {
+    font-size: 20px;
+    font-style: bold;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+p {
+    text-align: left;
+}
+
+.list-group li {
+    text-align: left;
+    font-size: 15px;
+    margin-right: auto;
+    font-weight: bold;
+}
+
+#resto-list {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+a {
+    color: purple;
+}
+span {
+    color: green;
+    text-align: right;
+}
+
+a:hover {
+    text-decoration: none;
+    color: orange;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Damion&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <title>Camp Cafe - Camp Info</title>
+</head>
+
+<header class="camp-header">
+   <h1>CampCafe</h1>
+</header>
+<body>
+    <div class="camp-title">
+        <h2>Camp McCamp campground</h2>
+    </div>
+
+    <div class="camp-links">
+        <button type="button" class="btn btn-lg">Go Back</button>
+        <button type="button" class="btn btn-lg">Weather & Air Quality</button>
+        <button type="button" class="btn btn-lg">Restaurants around camp</button>
+        <button type="button" class="btn btn-lg">Route & Traffic</button>
+    </div>
+
+    <div class="row" id="about-camp">
+        <div class="col-5 containers" id="camp-info">
+            <h3>Campground information</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium rerum eaque eveniet laboriosam deleniti vero ea nulla, laudantium harum! Neque deserunt id, ex officiis eius eum maxime voluptate nihil, similique reiciendis minus temporibus laborum quod.</p>
+        </div>
+        <div class="col-5 containers" id="activities">
+            <h3>Activities available</h3>
+            <ul class="list-activities" id="activ-list">
+            </ul>
+        </div>
+    </div>
+
+    <div class="row" id="second-container">
+        <div class="col-5 containers" id="weather">
+            <h3>Weather</h3>
+        </div>
+        <div class="col-4 containers" id="restaurants">
+            <h3>Restaurants around camp...</h3>
+            <ul class="list-group" id="resto-list">
+        
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-11 my-auto containers" id="map">
+            <h3>Route & Traffic</h3>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/80833262c1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./assets/js/activities.js"></script>
+
+</body>
+
+</html>
