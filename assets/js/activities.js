@@ -20,16 +20,17 @@ var getActivities = function(input) {
 var displayactivityResults = function(info) {
     var activities= info.data;
     console.log(activities);
-    // for (var i=0; i<activities.length; i++){
-    //     var activity = activities[i].name;
+     for (var i=0; i<activities.length; i++){
+         var name = activities[i].name;
         //console.log(activity);
         $("#activ-list")
             .append(
-                `<li class="list-activities-item>
+                `<li class="list-activities-item">
+                    ${name}
                 </li>`
                 
             );
-
+    }
     
 };
 
