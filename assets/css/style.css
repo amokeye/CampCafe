@@ -18,6 +18,7 @@ body {
     margin-bottom: 5px;
 }
 
+
 .camp-header h1 {
     font-family: 'Damion', cursive;
     text-align: left;
@@ -32,6 +33,14 @@ body {
     width: auto;
 }
 
+
+.search h2 {
+    text-align: center;
+    font-family: 'Damion', cursive;
+    color: purple;
+}
+
+
 input {
     border: white;
     border-radius: 50px;
@@ -39,6 +48,7 @@ input {
     width: 250px;
     font-size: 15px;    
 }
+
 
 .searchBtn {
     border: none;
@@ -50,14 +60,38 @@ input {
     height: auto;
 }
 
-.loader img {
-    width: 80px;
-    height: auto;;
-}
+
+.loader {
+    border: 16px solid blanchedalmond;
+    border-top: 16px solid orange;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+
 
 .hide {
     display: none;
 }
+
+
+.show {
+    display: inline-block;
+}
+
 
 .btn {
     background-color: transparent;
@@ -67,17 +101,20 @@ input {
     transition-duration: 0.4s;
 }
 
+
 .btn:hover {
     background-color: rgb(254, 170, 25);
     color: white;
     font-style: italic;
 }
 
+
 .row {
     display: flex;
     margin: 40px 10px 20px 10px;
     justify-content: space-around;
 }
+
 
 .containers {
     background-color:white;
@@ -87,9 +124,21 @@ input {
     padding-bottom: 20px;
 }
 
+.listing {
+    background-color:white;
+    border-radius: 35px;
+    width: 25%;
+    opacity: .85;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid purple;
+    margin: auto;
+}
+
 .map { 
     justify-items: center;
 }
+
 
 h3 {
     font-size: 20px;
@@ -99,9 +148,11 @@ h3 {
     padding-left: 20px;
 }
 
+
 p {
     text-align: left;
 }
+
 
 .list-group li {
     text-align: left;
@@ -110,18 +161,23 @@ p {
     font-weight: bold;
 }
 
+
 #resto-list {
     margin-top: 10px;
     margin-left: 20px;
 }
 
+
 a {
     color: purple;
 }
+
+
 span {
     color: green;
     text-align: right;
 }
+
 
 a:hover {
     text-decoration: none;
