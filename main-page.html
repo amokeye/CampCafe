@@ -13,17 +13,20 @@
     <h1>CampCafe</h1>
 </header>
 
-<body></body>
+<body>
     <div class="search">
-            <input type="text" class="search-input" placeholder="Enter city, state, or zip code here">
-            <button type="submit" class="searchBtn">
+        <h2>Enter state abbreviation below to search campgrounds by state</h2>
+            <input type="text" class="search-input" id="entry" placeholder="Example: AL for Alabama">
+            <button type="submit" class="searchBtn" id="select">
             <i class="fas fa-search"></i>
             </button>
     </div>
 
-    <div class="loader hide">
-        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/04de2e31234507.564a1d23645bf.gif">
-    </div>
+    <div class="loader hide" id="loading"></div>
+
+    <br>
+    
+    <div id="grounds-list"></div>
 
 
 
@@ -31,7 +34,8 @@
     <script src="https://kit.fontawesome.com/80833262c1.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/groundslist.js"></script>
+
 
 
 </body>
