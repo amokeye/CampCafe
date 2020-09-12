@@ -14,6 +14,9 @@ $('#select').on('click', function(event) {
     $('#grounds-list')
         .empty();
 
+    $('#wrong')
+        .hide();
+
     // Empty textbox entry
     $('#entry')
         .val('');
@@ -43,8 +46,14 @@ $('#select').on('click', function(event) {
         console.log(response);
 
         // Ensure that user's inputs are valid
-        if (response.length === 0) {
-            console.log('Invalid entry.');
+        if (response.data.length === 0) {
+            $('#wrong')
+                .show();
+        }
+
+        else if (sCode === "") {
+            $('#wrong')
+                .show();
         }
 
         // Ensure that results are based on state input from user

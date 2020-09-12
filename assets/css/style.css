@@ -135,6 +135,13 @@ input {
     margin: auto;
 }
 
+
+.invalid-data h5 {
+    font-style: bold;
+    text-align: auto;
+}
+
+
 .map { 
     justify-items: center;
 }
