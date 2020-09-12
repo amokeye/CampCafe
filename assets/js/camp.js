@@ -31,7 +31,16 @@ var displayYelpResults = function(data) {
     for (var i=0; i < restaurants.length; i++) {
         var distance = convertToMiles(restaurants[i].distance);
         var name = restaurants[i].name;
-        console.log(name + " " + distance + "mi");
+        var url = restaurants[i].url;
+        var price = restaurants[i].price;
+        var phone = restaurants[i].phone;
+        $("#resto-list")
+            .append(
+                `<li class="list-group-item">
+                    <a href="${url}">${name}</a> <span>${price}</span>
+                   </br>${phone} ${distance}mi away
+                </li>`
+            );
     }
 };
 
@@ -42,3 +51,4 @@ var displayRestaurantInfo = function(info) {
 var convertToMiles =  function(meters) {
     return (meters/1609.34).toFixed(2);
 }
+getRestaurants("hayward");
