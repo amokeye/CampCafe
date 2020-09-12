@@ -8,7 +8,7 @@ var getRestaurants = function(input) {
     var myHeaders = new Headers();
     myHeaders.append("Authorization", "Bearer Vi0q_KlyjE3_Gpjr2rrAaqjTph5U1XC1MAUy05QestL0bgs04XW3hUjSIwaJ4Gi6YOChOX3gi00XxGo4s4efLcykIAEZGk5YO_RG2ARsYNoOTInWdrGoFiq_B6ZSX3Yx");
     myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("Acces", "");
+    myHeaders.append("Access", "");
 
 
     var requestOptions = {

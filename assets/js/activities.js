@@ -4,10 +4,22 @@ var searchBtnEl = document.querySelector('.searchBtn');
 
 var getActivities = function(input) {
     //URl request
-     var npsApi = "https://developer.nps.gov/api/v1/activities?parkCode="+ input +"&api_key=16qnixGPCRxcuKRsBRxu9yl0P6xo3CbdECaehB9V&limit=10"
+     var npsApi = "https://cors-anywhere.herokuapp.com/https://developer.nps.gov/api/v1/activities?parkCode="+ input +"&api_key=16qnixGPCRxcuKRsBRxu9yl0P6xo3CbdECaehB9V&limit=10"
+
+
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Acces", "");
+
+var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+    };
+
 
     //make URL request  
-    fetch(npsApi).then(function(response){
+    fetch(npsApi,requestOptions).then(function(response){
         response.json().then(function(data){
             console.log(data);
             displayactivityResults(data);
