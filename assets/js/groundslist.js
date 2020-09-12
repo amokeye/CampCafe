@@ -58,7 +58,7 @@ $('#select').on('click', function(event) {
             for (var i = 0; i < grounds.length; i++) {
                 
                 var names1 = grounds[i].name;
-                var campCard = $("<div>").addClass("card containers text-black");
+                var campCard = $("<div>").addClass("card listing text-black");
                 var cardContent = $("<div>").addClass("card-body");
                 var results = $("<a>").attr("href", "./campground.html");
                 results.attr("target", "_blank");
