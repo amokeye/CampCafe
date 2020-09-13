@@ -46,3 +46,11 @@ var displayactivityResults = function(info) {
     }
     
 };
+
+
+var dislayactivitiesInfo = function(info) {
+
+}
+
+
+getActivities("hayward");
