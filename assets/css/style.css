@@ -190,3 +190,8 @@ a:hover {
     text-decoration: none;
     color: orange;
 }
+
+.icon {
+    width: 100px;
+    height: 100px;
+}

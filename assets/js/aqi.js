@@ -51,7 +51,7 @@ var displayaqiResults = function(info) {
                 <b>Current Temperature</b> </br> </br>${aqiTemp}°F
                 </br>
                 </br>
-                <img src="https://airvisual.com/images/${aqiIcon}.png">
+                <img class ="icon" src="https://airvisual.com/images/${aqiIcon}.png">
             </div>`
 
         );
