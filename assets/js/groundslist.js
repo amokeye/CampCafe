@@ -7,7 +7,7 @@ $('#select').on('click', function(event) {
     event.preventDefault();
 
     // Variable for user's entry
-    var sCode = $('#entry')
+    const sCode = $('#entry')
         .val();
     
     // Empty what was previously displayed in the list of campgrounds
@@ -70,6 +70,7 @@ $('#select').on('click', function(event) {
                 var campCard = $("<div>").addClass("card listing text-black");
                 var cardContent = $("<div>").addClass("card-body");
                 var results = $("<a>").attr("href", "./campground.html");
+                results.addClass("no-underline");
                 results.attr("target", "_blank");
 
                 

@@ -2,6 +2,7 @@
     text-align: center;
 }
 
+
 body {
     background-image: url('../images/camp-cafe-bg-v2.jpg');
     background-repeat: no-repeat;
@@ -9,6 +10,7 @@ body {
     background-attachment: fixed;
     background-size: 100% 100%;
 }
+
 
 .site-title h1 {
     font-family: 'Damion', cursive;
@@ -36,8 +38,13 @@ body {
 
 .search h2 {
     text-align: center;
-    font-family: 'Damion', cursive;
+    font-family: 'Merienda', cursive;
     color: purple;
+}
+
+
+::placeholder {
+    font-family: 'Merienda', cursive;
 }
 
 
@@ -124,6 +131,7 @@ input {
     padding-bottom: 20px;
 }
 
+
 .listing {
     background-color:white;
     border-radius: 35px;
@@ -133,6 +141,11 @@ input {
     padding-bottom: 10px;
     border: 1px solid purple;
     margin: auto;
+}
+
+
+.no-underline {
+    text-decoration: none;
 }
 
 
