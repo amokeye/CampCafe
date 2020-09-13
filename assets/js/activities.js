@@ -37,9 +37,9 @@ var displayactivityResults = function(info) {
         //console.log(activity);
         $("#activ-list")
             .append(
-                `<li class="list-activities-item">
+                `<div class="list-activities-item">
                     ${name}
-                </li>`
+                </div>`
                 
             );
     }
