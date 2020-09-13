@@ -17,12 +17,16 @@
     <div class="search">
             <input type="text" class="search-input" placeholder="Enter city, state, or zip code here">
             <button type="submit" class="searchBtn">
-            <i class="fas fa-search"></i>
+                <i class="fas fa-search" id="searchIcon"></i>
             </button>
     </div>
 
     <div class="loader hide">
         <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/04de2e31234507.564a1d23645bf.gif">
+    </div>
+
+    <div class="hide" id="resultsContainer">
+        <ul id="results-list"></ul>
     </div>
 
 
@@ -32,6 +36,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="./assets/js/script.js"></script>
+    
 
 
 </body>

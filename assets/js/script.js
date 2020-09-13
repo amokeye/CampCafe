@@ -1,6 +1,16 @@
 var loaderEl = document.querySelector(".loader");
 var searchBtnEl = document.querySelector(".searchBtn");
 var searchInputEl = document.querySelector(".search-input");
+var resultsEl  = document.getElementById("resultsContainer");
+var resultsListEl  = document.getElementById("results-list");
+
+
+
+var userCoords = { 
+    "lat": 0, 
+    "long" : 0 
+};
+
 
 var getCamps = function(input) {
     //URl request
@@ -13,7 +23,7 @@ var getCamps = function(input) {
     .then(function(response){
         if (response.ok) {
             response.json().then(function(data){
-                displayactivityResults(data);
+                displayCamps(data);
             });
         } else {
             loaderEl.setAttribute("class", "hide");
@@ -26,13 +36,22 @@ var getCamps = function(input) {
     });
 };
 
-var displayactivityResults = function(location) {
-    var activities= location.data;
+
+var displayCamps = function(location) {
+    var camps = location.data;
     loaderEl.setAttribute("class", "hide");
-    for (var i=0; i<activities.length; i++){
-        var activity = activities[i]
-        console.log(activity);
+
+    resultsListEl.textContent = "";
+    resultsEl.removeAttribute("class","hide");
+    
+    for (var i=0; i<camps.length; i++){
+        var camp = camps[i];
+        var name = camp.name;
+        var coordString = userCoords.lat + "," + userCoords.long;
+        var toCoords = camp.latitude + "," + camp.longitude;
+        $("#results-list").append(`<li><a href="campground.html?camp=${name}&from=${coordString}&to=${toCoords}">${name}</a></li>`);
     }
+    console.log(camps);
 };
 
 var formSubmitHandler = function(event) {
@@ -40,7 +59,8 @@ var formSubmitHandler = function(event) {
     
     var searchLocation = searchInputEl.value.trim();
     
-    if (searchLocation) {   
+    if (searchLocation) {
+        // window.location.href = "campground.html?from=" + userCoords.lat + "," + userCoords.long;
         getCamps(searchLocation);
         searchInputEl.value = "";
     } else {
@@ -48,8 +68,31 @@ var formSubmitHandler = function(event) {
     }
 };
 
-searchBtnEl.addEventListener("click", formSubmitHandler);
+var success = function(pos) {
+    // var searchIconEl = document.querySelector("#searchIcon");
+    console.log("hello");
+    var coord = pos.coords;
+    userCoords.lat = coord.latitude;
+    userCoords.long = coord.longitude;
+    
+    // new_html = '<a href="campground.html?loc=' + userCoords.lat + ',' + userCoords.long + '">' + searchIconEl + '</a>';
+    // document.querySelector(".searchBtn").innerHTML = new_html;
+    // $(".searchBtn").html(`<a href="campground.html?loc=${userCoords.lat},${userCoords.long}"><i class="fas fa-search" id="searchIcon"></i></a>`);
+}
+
+var error = function() {
+    
+}
 
 // get user's location to enable route to selected campground
-window.navigator.geolocation
-  .getCurrentPosition(console.log, console.log);
+if (userCoords.lat === 0) {
+    window.navigator.geolocation
+    .getCurrentPosition(success, error);
+}
+
+if (searchBtnEl) {
+    searchBtnEl.addEventListener("click", formSubmitHandler);
+}
+
+
+
