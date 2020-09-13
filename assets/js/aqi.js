@@ -16,16 +16,6 @@ var getAqi = function(input) {
 
 };
 
-// var WeatherIcon =function(){
-//     var imgEl = document.createElement("img");
-//     var iconId =iconId;
-
-//     imgEl.setAttribute("src", geticonimgUrl(iconId));
-//     imgEl.setAttribute("width", "50px");
-//     imgEl setAttribute("height", "50px");
-//     document.getElementById("aqi-list").appendChild(imgEl);
-// };
-
 //Acitivities Fetch
 var displayaqiResults = function(info) {
     var aqiCity = info.data.city;
