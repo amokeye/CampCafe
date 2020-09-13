@@ -32,7 +32,7 @@ var requestOptions = {
 var displayactivityResults = function(info) {
     var activities= info.data;
     console.log(activities);
-     for (var i=0; i<activities.length; i++){
+     for (var i=0; i<10; i++){
          var randomActivity = activities[Math.floor(Math.random() *activities.length)]
             console.log(randomActivity.name)
         //console.log(activity);

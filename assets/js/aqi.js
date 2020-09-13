@@ -15,20 +15,18 @@ var getAqi = function(input) {
     });
 
 };
+
 //Acitivities Fetch
 var displayaqiResults = function(info) {
     var aqiCity = info.data.city;
     var aqiState =info.data.state;
     var aqiValue = info.data.current.pollution.aqius;
     var aqiTemp = info.data.current.weather.hu;
+    var aqiIcon =info.data.current.weather.ic;
     console.log(aqiCity);
     console.log(aqiState);
     console.log(aqiValue);
     console.log(aqiTemp);
-//Convert Celcius to Farenheit
-    var x = aqiTemp;
-    var y = 32;
-    var aqiTempF = x + y;
     
     $("#aqi-list")
         .append(
@@ -40,10 +38,10 @@ var displayaqiResults = function(info) {
                 <b>Current Air Quality Value</b> </br> </br>${aqiValue}
                 </br>
                 </br>
-                <b>Current Temperature</b> </br> </br>${aqiTempF}°F
+                <b>Current Temperature</b> </br> </br>${aqiTemp}°F
                 </br>
                 </br>
-                <img src="https://airvisual.com/images/01d.png">
+                <img class ="icon" src="https://airvisual.com/images/${aqiIcon}.png">
             </div>`
 
         );
