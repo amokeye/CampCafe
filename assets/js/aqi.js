@@ -21,31 +21,15 @@ var displayaqiResults = function(info) {
     var aqiState =info.data.state;
     var aqiValue = info.data.current.pollution.aqius;
     var aqiTemp = info.data.current.weather.hu;
-    var iconId =info.data.current.weather.ic;
-    var geticonimgUrl =function(iconId){
-         return "https://airvisual.com/images/"+ iconId + ".png";
-
-    };
     console.log(aqiCity);
     console.log(aqiState);
     console.log(aqiValue);
     console.log(aqiTemp);
-
 //Convert Celcius to Farenheit
-var x = aqiTemp;
-var y = 32;
-var aqiTempF = x + y;
-
-var WeatherIcon =function(){
-    var imgEl = document.createElement("img");
-    var iconId =iconId;
-
-    imgEl.setAttribute("src", geticonimgUrl(iconId));
-    imgEl.setAttribute("width", "50px");
-    imgEl setAttribute("height", "50px");
-    document.getElementById("aqi-list").appendChild(imgEl);
-}
-
+    var x = aqiTemp;
+    var y = 32;
+    var aqiTempF = x + y;
+    
     $("#aqi-list")
         .append(
             `<div class="list-report-item">
@@ -56,9 +40,9 @@ var WeatherIcon =function(){
                 <b>Current Air Quality Value</b> </br> </br>${aqiValue}
                 </br>
                 </br>
-                <b>Current Temperature</b> </br> </br>${aqiTempF}Â°F
-                <br>
-                <br>
+                <b>Current Temperature</b> </br> </br>${aqiTempF}°F
+                </br>
+                </br>
                 <img src="https://airvisual.com/images/01d.png">
             </div>`
 
