@@ -59,11 +59,10 @@ $('#select').on('click', function(event) {
         // Ensure that results are based on state input from user
         else {
 
-            console.log(response);
-
-            // Variable and "for" loop to iterate through list of 
+            // Variable for campground data
             var grounds = response.data;
 
+            // For loop to iterate through data for campground results
             for (var i = 0; i < grounds.length; i++) {
                 
                 var index = i;
@@ -73,440 +72,460 @@ $('#select').on('click', function(event) {
                 var cardContent = $("<div>").addClass("card-body");
                 var results = $("<a>").attr("href", "./campground.html");
                 results.addClass("no-underline");
-                results.attr("target", "_blank");
-
+                results.attr("target", "_blank"); 
                 
-                if (sCode === "AL" || "al") {
-                    
-                    results.append(names1)
+                // Function that renders the campground names to the page
+                function displayNames() {
+                    results.append(names1);
                     cardContent.append(results);
                     campCard.append(cardContent);
                     $("#grounds-list").append(campCard);
+                }
+                
+                // If/else if loops to loop through all 50 states and display respective results
+                if (sCode === "AL" || "al") {
                     
-                    
+                    displayNames();
+                                   
                 }
 
                 else if (sCode === "AK" || "ak") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "AZ" || "az") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "AR" || "ar") {
                     
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "CA" || "ca") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "CO" || "co") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "CT" || "ct") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "DE" || "de") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "FL" || "fl") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "GA" || "ga") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "HI" || "hi") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "ID" || "id") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "IL" || "il") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "IN" || "in") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "IA" || "ia") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "KS" || "ks") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "KY" || "ky") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "LA" || "la") {
                     
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "ME" || "me") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "MD" || "md") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "MA" || "ma") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "MI" || "mi") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "MN" || "mn") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "MS" || "ms") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "MO" || "mo") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "MT" || "mt") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "NE" || "ne") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "NV" || "nv") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "NH" || "nh") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "NJ" || "nj") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "NM" || "nm") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "NY" || "ny") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "NC" || "nc") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "ND" || "nd") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "OH" || "oh") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "OK" || "ok") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "OR" || "or") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "PA" || "pa") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "RI" || "ri") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "SC" || "sc") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "SD" || "sd") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "TN" || "tn") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "TX" || "tx") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "UT" || "ut") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "VT" || "vt") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "VA" || "va") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
     
                 else if (sCode === "WA" || "wa") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "WV" || "wv") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "WI" || "wi") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
+                    displayNames();
+
                 }
 
                 else if (sCode === "WY" || "wy") {
 
-                    results.append(names1)
-                    cardContent.append(results);
-                    campCard.append(cardContent);
-                    $("#grounds-list").append(campCard);
-                }
+                    displayNames();
 
+                }
         
             }
+            
  
         }
 
-        $('.card').on('click', function(event) {
+
+        // Click events that display campground info on results page with respect to user's campground of choice
+        $('#0').on('click', function(event) {
 
             event.preventDefault();
-            
-           // var campInfo;
+
+            var descr = grounds[0].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
         
-                window.open("campground.html");
-                //console.log("testing");
-                
-                document.getElementById("camp-info").innerHTML = response.data[0].description;
+        
+        })
 
-                //campInfo = response.data[0].description;
-               // $('#camp-list').append(campInfo);
-                
-           // }
 
-            //else {alert('boooo!')}
+        $('#1').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[1].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#2').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[0].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#3').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[0].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#4').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[0].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#5').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[0].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#6').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[0].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#7').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[0].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#8').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[0].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#9').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[0].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#10').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[0].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
         
         
         })
     
     })
     
-    })
+})
 
 
 
