@@ -1,3 +1,6 @@
+var groundsListEl = document.getElementById("grounds-list");
+var campsArr = [];
+
 // Camping API key from NPS
 const NPSkey = "4bS2JoIIGZlYQfUEJWb94fOKALNEJFeLfF7RUSAI";
 
@@ -63,14 +66,17 @@ $('#select').on('click', function(event) {
 
             // Variable and "for" loop to iterate through list of 
             var grounds = response.data;
+            campsArr = grounds;
 
             for (var i = 0; i < grounds.length; i++) {
                 
                 var names1 = grounds[i].name;
                 var campCard = $("<div>").addClass("card listing text-black");
                 var cardContent = $("<div>").addClass("card-body");
-                var results = $("<a>").attr("href", "./campground.html");
+                var results = $("<a>").attr("href", `./campground.html`);
+                
                 results.attr("target", "_blank");
+                results.attr("id", i);
 
                 
                 if (sCode === "AL" || "al") {
@@ -479,3 +485,28 @@ $('#select').on('click', function(event) {
     })
 
 })
+
+var campLinkHandler = function(event) {
+    var id = event.target.getAttribute("id");
+    let campObj = campsArr[id];
+    localStorage.setItem("name", campObj.name);
+    localStorage.setItem("description", campObj.description);
+    localStorage.setItem("campsites", campObj.campsites.totalSites);
+
+    if (campObj.reservationUrl === "") {
+        localStorage.setItem("reservationInfo", campObj.reservationInfo);
+    } else {
+        localStorage.setItem("url", campObj.reservationUrl);
+    }
+
+    if (campObj.latitude === "") {
+        localStorage.setItem("park", campObj.parkCode);
+    } else {
+        localStorage.setItem("latitude", campObj.latitude);
+        localStorage.setItem("longitude", campObj.longitude);
+    }
+
+};
+
+groundsListEl.addEventListener('click', campLinkHandler);
+
