@@ -508,5 +508,18 @@ var campLinkHandler = function(event) {
 
 };
 
+var success = function(pos) {
+    var coord = pos.coords;
+    localStorage.setItem("userLat", coord.latitude);
+    localStorage.setItem("userLong", coord.longitude);
+};
+
+var error = function() {
+    
+};
+
 groundsListEl.addEventListener('click', campLinkHandler);
 
+// get user's location to enable route to selected campground
+window.navigator.geolocation
+  .getCurrentPosition(success, error);
