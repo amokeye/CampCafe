@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.64.0/maps/maps.css'>
     <title>Camp Cafe - Camp Info</title>
 </head>
 
@@ -15,54 +16,72 @@
 </header>
 <body>
     <div class="camp-title">
-        <h2>Camp McCamp campground</h2>
+        <h2 id="camp-name"></h2>
     </div>
 
     <div class="camp-links">
-        <button type="button" class="btn btn-lg">Go Back</button>
-        <button type="button" class="btn btn-lg">Weather & Air Quality</button>
-        <button type="button" class="btn btn-lg">Nearby Restaurants</button>
-        <button type="button" class="btn btn-lg">Route & Traffic</button>
+        <button type="button" class="btn btn-lg"><a href="index.html"> Back</a></button>
+        <button type="button" class="btn btn-lg"><a href="#aqi">Weather & Air Quality</a></button>
+        <button type="button" class="btn btn-lg"><a href="#restaurants">Restaurants around camp</a></button>
+        <button type="button" class="btn btn-lg"><a href="#map">Map & Route</a></button>
     </div>
 
     <div class="row" id="about-camp">
         <div class="col-5 containers" id="camp-info">
             <h3>Campground information</h3>
             <p></p>
-            <div class="angry" id="camp-list"></div>
+            <div class="information" id="camp-list"></div>
         </div>
         <div class="col-5 containers" id="activities">
-            <h3>Activities available</h3>
-            <ul class="list-activities">
+            <h3>Activities Available</h3>
+            <ul class="list-activities" id="activ-list">
             </ul>
         </div>
     </div>
 
     <div class="row" id="second-container">
-        <div class="col-5 containers" id="weather">
-            <h3>Weather</h3>
+        <div class="col-5 containers" id="aqi">
+          
+            <h3>Air Quality Index:</h3>
+            <section class="list-report" id="aqi-list">
+
+            </section>
         </div>
+            
         <div class="col-4 containers" id="restaurants">
             <h3>Nearby Restaurants</h3>
-            <ul class="list-group" id="resto-list">
+            <section class="list-group" id="resto-list">
         
-            </ul>
+            </section>
         </div>
     </div>
     <div class="row">
-        <div class="col-11 my-auto containers" id="map">
-            <h3>Route & Traffic</h3>
+        <div class="col-8 my-auto containers">
+            <h3>Map & Route</h3>
+            <div id="floating-panel">
+                <b>Mode of Travel: </b>
+                <select id="mode">
+                  <option value="DRIVING">Driving</option>
+                  <option value="WALKING">Walking</option>
+                  <option value="BICYCLING">Bicycling</option>
+                  <option value="TRANSIT">Transit</option>
+                </select>
+              </div>
+            <div class="map" id="map"></div>
         </div>
     </div>
 
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://kit.fontawesome.com/80833262c1.js" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK819Xs-_MB1OznAoJasw7dFyfxq6E23c&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="./assets/js/camp.js"></script>
+    <script src="./assets/js/camp.js"></script> 
     <script src="./assets/js/groundslist.js"></script>
-    <script src="./assets/js/descriptions.js"></script>
 
 </body>
 

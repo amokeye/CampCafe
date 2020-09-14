@@ -1,4 +1,7 @@
-// Camping API key from NPS
+var groundsListEl = document.getElementById("grounds-list");
+var campsArr = [];
+
+// Camping API key from National Park Service
 const NPSkey = "4bS2JoIIGZlYQfUEJWb94fOKALNEJFeLfF7RUSAI";
 
 // Display data dependent on user's entry once search button is clicked
@@ -7,7 +10,7 @@ $('#select').on('click', function(event) {
     event.preventDefault();
 
     // Variable for user's entry
-    const sCode = $('#entry')
+    var sCode = $('#entry')
         .val();
     
     // Empty what was previously displayed in the list of campgrounds
@@ -43,8 +46,6 @@ $('#select').on('click', function(event) {
         // Hide loader once response loads to page
         $('#loading').hide();
 
-        console.log(response);
-
         // Ensure that user's inputs are valid
         if (response.data.length === 0) {
             $('#wrong')
@@ -72,7 +73,8 @@ $('#select').on('click', function(event) {
                 var cardContent = $("<div>").addClass("card-body");
                 var results = $("<a>").attr("href", "./campground.html");
                 results.addClass("no-underline");
-                results.attr("target", "_blank"); 
+                results.attr("target", "_blank");
+                results.attr("id", i); 
                 
                 // Function that renders the campground names to the page
                 function displayNames() {
@@ -419,7 +421,7 @@ $('#select').on('click', function(event) {
 
             event.preventDefault();
 
-            var descr = grounds[0].description;
+            var descr = grounds[2].description;
             localStorage.setItem('descriptions', descr);
     
             window.open("campground.html");
@@ -431,7 +433,7 @@ $('#select').on('click', function(event) {
 
             event.preventDefault();
 
-            var descr = grounds[0].description;
+            var descr = grounds[3].description;
             localStorage.setItem('descriptions', descr);
     
             window.open("campground.html");
@@ -443,7 +445,7 @@ $('#select').on('click', function(event) {
 
             event.preventDefault();
 
-            var descr = grounds[0].description;
+            var descr = grounds[4].description;
             localStorage.setItem('descriptions', descr);
     
             window.open("campground.html");
@@ -455,7 +457,7 @@ $('#select').on('click', function(event) {
 
             event.preventDefault();
 
-            var descr = grounds[0].description;
+            var descr = grounds[5].description;
             localStorage.setItem('descriptions', descr);
     
             window.open("campground.html");
@@ -467,7 +469,7 @@ $('#select').on('click', function(event) {
 
             event.preventDefault();
 
-            var descr = grounds[0].description;
+            var descr = grounds[6].description;
             localStorage.setItem('descriptions', descr);
     
             window.open("campground.html");
@@ -479,7 +481,7 @@ $('#select').on('click', function(event) {
 
             event.preventDefault();
 
-            var descr = grounds[0].description;
+            var descr = grounds[7].description;
             localStorage.setItem('descriptions', descr);
     
             window.open("campground.html");
@@ -491,7 +493,7 @@ $('#select').on('click', function(event) {
 
             event.preventDefault();
 
-            var descr = grounds[0].description;
+            var descr = grounds[8].description;
             localStorage.setItem('descriptions', descr);
     
             window.open("campground.html");
@@ -503,7 +505,7 @@ $('#select').on('click', function(event) {
 
             event.preventDefault();
 
-            var descr = grounds[0].description;
+            var descr = grounds[9].description;
             localStorage.setItem('descriptions', descr);
     
             window.open("campground.html");
@@ -515,7 +517,7 @@ $('#select').on('click', function(event) {
 
             event.preventDefault();
 
-            var descr = grounds[0].description;
+            var descr = grounds[10].description;
             localStorage.setItem('descriptions', descr);
     
             window.open("campground.html");
@@ -528,8 +530,40 @@ $('#select').on('click', function(event) {
 })
 
 
+var campLinkHandler = function(event) {
+    var id = event.target.getAttribute("id");
+    let campObj = campsArr[id];
+    localStorage.setItem("name", campObj.name);
+    localStorage.setItem("description", campObj.description);
+    localStorage.setItem("campsites", campObj.campsites.totalSites);
 
+    if (campObj.reservationUrl === "") {
+        localStorage.setItem("reservationInfo", campObj.reservationInfo);
+    } else {
+        localStorage.setItem("url", campObj.reservationUrl);
+    }
 
+    if (campObj.latitude === "") {
+        localStorage.setItem("park", campObj.parkCode);
+    } else {
+        localStorage.setItem("latitude", campObj.latitude);
+        localStorage.setItem("longitude", campObj.longitude);
+    }
 
+};
 
+var success = function(pos) {
+    var coord = pos.coords;
+    localStorage.setItem("userLat", coord.latitude);
+    localStorage.setItem("userLong", coord.longitude);
+};
 
+var error = function() {
+    
+};
+
+groundsListEl.addEventListener('click', campLinkHandler);
+
+// get user's location to enable route to selected campground
+window.navigator.geolocation
+  .getCurrentPosition(success, error);
