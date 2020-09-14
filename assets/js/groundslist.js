@@ -48,7 +48,7 @@ $('#select').on('click', function(event) {
 
         // Ensure that user's inputs are valid
         if (response.data.length === 0) {
-            $('#wrong')
+            $('#none1')
                 .show();
         }
 
