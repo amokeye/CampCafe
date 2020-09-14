@@ -32,7 +32,7 @@ $('#select').on('click', function(event) {
     fetch(
         'https://developer.nps.gov/api/v1/campgrounds?stateCode=' + 
         sCode + 
-        '&api_key=' + 
+        '&limit=10&api_key=' + 
         NPSkey
     )
 
@@ -43,8 +43,13 @@ $('#select').on('click', function(event) {
 
     .then(function(response) {
         
+        $('#none1')
+            .hide();
+
         // Hide loader once response loads to page
-        $('#loading').hide();
+        $('#loading')
+            .hide();
+        
 
         // Ensure that user's inputs are valid
         if (response.data.length === 0) {
