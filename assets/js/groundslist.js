@@ -66,8 +66,10 @@ $('#select').on('click', function(event) {
 
             for (var i = 0; i < grounds.length; i++) {
                 
+                var index = i;
                 var names1 = grounds[i].name;
                 var campCard = $("<div>").addClass("card listing text-black");
+                campCard.attr("id", index);
                 var cardContent = $("<div>").addClass("card-body");
                 var results = $("<a>").attr("href", "./campground.html");
                 results.addClass("no-underline");
@@ -80,6 +82,7 @@ $('#select').on('click', function(event) {
                     cardContent.append(results);
                     campCard.append(cardContent);
                     $("#grounds-list").append(campCard);
+                    
                     
                 }
 
@@ -475,8 +478,39 @@ $('#select').on('click', function(event) {
                     $("#grounds-list").append(campCard);
                 }
 
+        
             }
+ 
         }
+
+        $('.card').on('click', function(event) {
+
+            event.preventDefault();
+            
+           // var campInfo;
+        
+                window.open("campground.html");
+                //console.log("testing");
+                
+                document.getElementById("camp-info").innerHTML = response.data[0].description;
+
+                //campInfo = response.data[0].description;
+               // $('#camp-list').append(campInfo);
+                
+           // }
+
+            //else {alert('boooo!')}
+        
+        
+        })
+    
+    })
+    
     })
 
-})
+
+
+
+
+
+
