@@ -36,6 +36,7 @@ var getActivities = function(input) {
 
 
 
+//Activities Fetch
 var displayactivityResults = function(info) {
     var activities= info.data;
     console.log(activities);
@@ -75,7 +76,7 @@ var displayactivityResults = function(info) {
 
 var getAqi = function(input) {
     //URl request
-    var aqiAPi = "http://api.airvisual.com/v2/nearest_city?key=97969920-1691-4c77-a5a4-3c3905b9f663"
+    var aqiAPi = "https://api.airvisual.com/v2/nearest_city?key=97969920-1691-4c77-a5a4-3c3905b9f663"
     //make URL request  
     fetch(aqiAPi).then(function(response){
         response.json().then(function(data){
