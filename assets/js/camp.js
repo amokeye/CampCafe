@@ -36,6 +36,7 @@ var getActivities = function(input) {
 
 
 
+//Activities Fetch
 var displayactivityResults = function(info) {
     var activities= info.data;
     console.log(activities);
