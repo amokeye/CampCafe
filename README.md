@@ -5,7 +5,7 @@
 
 ## Purpose:
 
-The app website is used to help users find campgrounds within all 50 states and provides them with info on weather, constellations, wildlife, restaurants, and directions/traffic.
+This static website is used to help users find campgrounds within all 50 states and provides them with info on weather, constellations, wildlife, restaurants, and directions/traffic.
 
 ## Developers:
 
@@ -16,12 +16,10 @@ The app website is used to help users find campgrounds within all 50 states and 
 
 ## Technology and Applications used:
 
-* Yelp API,         Version 12.68.1
-* TomTom API,       Version 10.55
-* Bitspi Air Pullution API,  Version 1.0
 * National Park Services API, Version 1.0
-* Open Weather API,   Version 1.0 
-
+* Airvisual API,  Version 1.0
+* Yelp API,         Version 12.68.1
+* Google Maps API,       Version 3.4.2
 
 
 ## Prerequisites to use Website:
@@ -31,7 +29,7 @@ Upon arriving at the app website, the user will be prompted for permission for t
 
 ## Installation:
 
-Click on the Github URL website link to be directed to the app website.
+Github deployed website: https://amokeye.github.io/CampCafe/
 
 
 

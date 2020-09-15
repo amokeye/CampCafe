@@ -1,6 +1,7 @@
 var groundsListEl = document.getElementById("grounds-list");
 var campsArr = [];
 
+
 // Camping API key from National Park Service
 const NPSkey = "4bS2JoIIGZlYQfUEJWb94fOKALNEJFeLfF7RUSAI";
 
@@ -84,6 +85,7 @@ $('#select').on('click', function(event) {
                 results.addClass("no-underline");
                 results.attr("target", "_blank");
                 results.attr("id", i); 
+
                 
                 // Function that renders the campground names to the page
                 function displayNames() {
@@ -597,3 +599,4 @@ groundsListEl.addEventListener('click', campLinkHandler);
 // get user's location to enable route to selected campground
 window.navigator.geolocation
   .getCurrentPosition(success, error);
+
