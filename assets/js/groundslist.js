@@ -42,7 +42,12 @@ $('#select').on('click', function(event) {
         })
 
     .then(function(response) {
+
+        // Hide response for states that have no campgrounds listed
+        $('#none1')
+            .hide();
         
+<<<<<<< Updated upstream
         $('#none1')
             .hide();
 
@@ -53,6 +58,16 @@ $('#select').on('click', function(event) {
 
         // Ensure that user's inputs are valid
         if (response.data.length === 0) {
+=======
+        // Hide loader once response loads to page
+        $('#loading')
+            .hide();
+
+        // Ensure that user's inputs are valid
+        if (response.data.length === 0) {
+
+            // Indicate that state that was input has no campgrounds available if data length is 0
+>>>>>>> Stashed changes
             $('#none1')
                 .show();
         }
@@ -65,7 +80,11 @@ $('#select').on('click', function(event) {
         // Ensure that results are based on state input from user
         else {
 
+<<<<<<< Updated upstream
             // Variable for campground data
+=======
+            // Variable and "for" loop to iterate through list of 
+>>>>>>> Stashed changes
             var grounds = response.data;
 
             // For loop to iterate through data for campground results
@@ -88,7 +107,11 @@ $('#select').on('click', function(event) {
                     campCard.append(cardContent);
                     $("#grounds-list").append(campCard);
                 }
+<<<<<<< Updated upstream
                 
+=======
+
+>>>>>>> Stashed changes
                 // If/else if loops to loop through all 50 states and display respective results
                 if (sCode === "AL" || "al") {
                     
@@ -387,13 +410,160 @@ $('#select').on('click', function(event) {
                 else if (sCode === "WY" || "wy") {
 
                     displayNames();
+<<<<<<< Updated upstream
+=======
+
+                }
+>>>>>>> Stashed changes
 
                 }
         
             }
+<<<<<<< Updated upstream
             
  
         }
+=======
+
+        }
+
+
+        // Click events that display campground info on results page with respect to user's campground of choice
+        $('#0').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[0].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+
+        $('#1').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[1].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#2').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[2].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#3').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[3].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#4').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[4].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#5').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[5].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#6').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[6].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#7').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[7].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#8').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[8].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#9').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[9].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+        $('#10').on('click', function(event) {
+
+            event.preventDefault();
+
+            var descr = grounds[10].description;
+            localStorage.setItem('descriptions', descr);
+    
+            window.open("campground.html");
+        
+        
+        })
+
+    })
+>>>>>>> Stashed changes
 
 
         // Click events that display campground info on results page with respect to user's campground of choice

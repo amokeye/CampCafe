@@ -42,12 +42,18 @@ body {
     color: purple;
 }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 ::placeholder {
     font-family: 'Merienda', cursive;
 }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 input {
     border: white;
     border-radius: 50px;
@@ -143,6 +149,9 @@ input {
     margin: auto;
 }
 
+.no-underline {
+    text-decoration: none;
+}
 
 .no-underline {
     text-decoration: none;
