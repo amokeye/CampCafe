@@ -11,7 +11,10 @@ campNameEl.textContent = localStorage.getItem('name');
 
 var getActivities = function(input) {
     //URl request
+
     var npsApi = "https://cors-anywhere.herokuapp.com/https://developer.nps.gov/api/v1/activities?parkCode="+ input +"&api_key=16qnixGPCRxcuKRsBRxu9yl0P6xo3CbdECaehB9V&limit=15";
+
+   
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -30,6 +33,7 @@ var getActivities = function(input) {
     
     });
 };
+
 
 
 var displayactivityResults = function(info) {
@@ -53,6 +57,22 @@ var displayactivityResults = function(info) {
 
 
 // Function to call Air Visual API
+var displayactivityResults = function(info) {
+    var activities= info.data;
+    console.log(activities);
+     for (var i=0; i<10; i++){
+         var randomActivity = activities[Math.floor(Math.random() *activities.length)]
+            console.log(randomActivity.name)
+        //console.log(activity);
+        $("#activ-list")
+            .append(
+                `<div class="list-activities-item">
+                    ${randomActivity.name}
+                </div>`
+            )
+    }  
+};
+
 var getAqi = function(input) {
     //URl request
     var aqiAPi = "http://api.airvisual.com/v2/nearest_city?key=97969920-1691-4c77-a5a4-3c3905b9f663"
@@ -66,6 +86,7 @@ var getAqi = function(input) {
     });
 
 };
+
 
 
 // AQI Results

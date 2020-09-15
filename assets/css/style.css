@@ -20,7 +20,6 @@ body {
     margin-bottom: 5px;
 }
 
-
 .camp-header h1 {
     font-family: 'Damion', cursive;
     text-align: left;
@@ -35,7 +34,6 @@ body {
     width: auto;
 }
 
-
 .search h2 {
     text-align: center;
     font-family: 'Merienda', cursive;
@@ -46,6 +44,7 @@ body {
     font-family: 'Merienda', cursive;
 }
 
+
 input {
     border: white;
     border-radius: 50px;
@@ -53,7 +52,6 @@ input {
     width: 250px;
     font-size: 15px;    
 }
-
 
 .searchBtn {
     border: none;
@@ -64,7 +62,6 @@ input {
     width: 50px;
     height: auto;
 }
-
 
 .loader {
     border: 16px solid blanchedalmond;
@@ -78,15 +75,12 @@ input {
     left: 50%;
     margin-top: -50px;
     margin-left: -100px;
-  }
+}
   
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-
-
-
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
 
 .hide {
     display: none;
@@ -155,11 +149,9 @@ input {
     text-align: auto;
 }
 
-
 .map { 
     justify-items: center;
 }
-
 
 h3 {
     font-size: 20px;
@@ -169,11 +161,9 @@ h3 {
     padding-left: 20px;
 }
 
-
 p {
     text-align: left;
 }
-
 
 .list-group li {
     text-align: left;
@@ -182,47 +172,39 @@ p {
     font-weight: bold;
 }
 
-
 #resto-list {
     margin-top: 10px;
     margin-left: 20px;
 }
 
-
 a {
     color: purple;
 }
-
 
 span {
     color: green;
     text-align: right;
 }
 
-
 a:hover {
     text-decoration: none;
     color: orange;
 }
-
 
 .icon {
     width: 100px;
     height: 100px;
 }
 
-
 .row {
     text-align: center;
 }
-
 
 #map {
     width: 600px;
     height: 400px;
     margin: 20px 10px 5px 20px;
 }
-
 
 #floating-panel {
     position: absolute;
