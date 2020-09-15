@@ -71,14 +71,14 @@ $('#select').on('click', function(event) {
 
             // Variable for campground data
             var grounds = response.data;
+            campsArr = grounds;
 
             // For loop to iterate through data for campground results
             for (var i = 0; i < grounds.length; i++) {
                 
-                var index = i;
                 var names1 = grounds[i].name;
                 var campCard = $("<div>").addClass("card listing text-black");
-                campCard.attr("id", index);
+                campCard.attr("id", i);
                 var cardContent = $("<div>").addClass("card-body");
                 var results = $("<a>").attr("href", "./campground.html");
                 results.addClass("no-underline");
@@ -399,13 +399,15 @@ $('#select').on('click', function(event) {
         }
 
 
-        // Click events that display campground info on results page with respect to user's campground of choice
+        // Click events that display campground name/info on results page with respect to user's campground of choice
         $('#0').on('click', function(event) {
 
             event.preventDefault();
 
             var descr = grounds[0].description;
             localStorage.setItem('descriptions', descr);
+            var nameDisplay = grounds[0].name;
+            localStorage.setItem ('campground-name', nameDisplay);
     
             window.open("campground.html");
         
@@ -419,6 +421,8 @@ $('#select').on('click', function(event) {
 
             var descr = grounds[1].description;
             localStorage.setItem('descriptions', descr);
+            var nameDisplay = grounds[1].name;
+            localStorage.setItem ('campground-name', nameDisplay);
     
             window.open("campground.html");
         
@@ -431,6 +435,8 @@ $('#select').on('click', function(event) {
 
             var descr = grounds[2].description;
             localStorage.setItem('descriptions', descr);
+            var nameDisplay = grounds[2].name;
+            localStorage.setItem ('campground-name', nameDisplay);
     
             window.open("campground.html");
         
@@ -443,6 +449,8 @@ $('#select').on('click', function(event) {
 
             var descr = grounds[3].description;
             localStorage.setItem('descriptions', descr);
+            var nameDisplay = grounds[3].name;
+            localStorage.setItem ('campground-name', nameDisplay);
     
             window.open("campground.html");
         
@@ -455,6 +463,8 @@ $('#select').on('click', function(event) {
 
             var descr = grounds[4].description;
             localStorage.setItem('descriptions', descr);
+            var nameDisplay = grounds[4].name;
+            localStorage.setItem ('campground-name', nameDisplay);
     
             window.open("campground.html");
         
@@ -467,6 +477,8 @@ $('#select').on('click', function(event) {
 
             var descr = grounds[5].description;
             localStorage.setItem('descriptions', descr);
+            var nameDisplay = grounds[5].name;
+            localStorage.setItem ('campground-name', nameDisplay);
     
             window.open("campground.html");
         
@@ -479,6 +491,8 @@ $('#select').on('click', function(event) {
 
             var descr = grounds[6].description;
             localStorage.setItem('descriptions', descr);
+            var nameDisplay = grounds[6].name;
+            localStorage.setItem ('campground-name', nameDisplay);
     
             window.open("campground.html");
         
@@ -491,6 +505,8 @@ $('#select').on('click', function(event) {
 
             var descr = grounds[7].description;
             localStorage.setItem('descriptions', descr);
+            var nameDisplay = grounds[7].name;
+            localStorage.setItem ('campground-name', nameDisplay);
     
             window.open("campground.html");
         
@@ -503,6 +519,8 @@ $('#select').on('click', function(event) {
 
             var descr = grounds[8].description;
             localStorage.setItem('descriptions', descr);
+            var nameDisplay = grounds[8].name;
+            localStorage.setItem ('campground-name', nameDisplay);
     
             window.open("campground.html");
         
@@ -515,6 +533,8 @@ $('#select').on('click', function(event) {
 
             var descr = grounds[9].description;
             localStorage.setItem('descriptions', descr);
+            var nameDisplay = grounds[9].name;
+            localStorage.setItem ('campground-name', nameDisplay);
     
             window.open("campground.html");
         
@@ -527,6 +547,8 @@ $('#select').on('click', function(event) {
 
             var descr = grounds[10].description;
             localStorage.setItem('descriptions', descr);
+            var nameDisplay = grounds[10].name;
+            localStorage.setItem ('campground-name', nameDisplay);
     
             window.open("campground.html");
         
@@ -534,141 +556,6 @@ $('#select').on('click', function(event) {
         })
 
     })
-
-
-        // Click events that display campground info on results page with respect to user's campground of choice
-        $('#0').on('click', function(event) {
-
-            event.preventDefault();
-
-            var descr = grounds[0].description;
-            localStorage.setItem('descriptions', descr);
-    
-            window.open("campground.html");
-        
-        
-        })
-
-
-        $('#1').on('click', function(event) {
-
-            event.preventDefault();
-
-            var descr = grounds[1].description;
-            localStorage.setItem('descriptions', descr);
-    
-            window.open("campground.html");
-        
-        
-        })
-
-        $('#2').on('click', function(event) {
-
-            event.preventDefault();
-
-            var descr = grounds[2].description;
-            localStorage.setItem('descriptions', descr);
-    
-            window.open("campground.html");
-        
-        
-        })
-
-        $('#3').on('click', function(event) {
-
-            event.preventDefault();
-
-            var descr = grounds[3].description;
-            localStorage.setItem('descriptions', descr);
-    
-            window.open("campground.html");
-        
-        
-        })
-
-        $('#4').on('click', function(event) {
-
-            event.preventDefault();
-
-            var descr = grounds[4].description;
-            localStorage.setItem('descriptions', descr);
-    
-            window.open("campground.html");
-        
-        
-        })
-
-        $('#5').on('click', function(event) {
-
-            event.preventDefault();
-
-            var descr = grounds[5].description;
-            localStorage.setItem('descriptions', descr);
-    
-            window.open("campground.html");
-        
-        
-        })
-
-        $('#6').on('click', function(event) {
-
-            event.preventDefault();
-
-            var descr = grounds[6].description;
-            localStorage.setItem('descriptions', descr);
-    
-            window.open("campground.html");
-        
-        
-        })
-
-        $('#7').on('click', function(event) {
-
-            event.preventDefault();
-
-            var descr = grounds[7].description;
-            localStorage.setItem('descriptions', descr);
-    
-            window.open("campground.html");
-        
-        
-        })
-
-        $('#8').on('click', function(event) {
-
-            event.preventDefault();
-
-            var descr = grounds[8].description;
-            localStorage.setItem('descriptions', descr);
-    
-            window.open("campground.html");
-        
-        
-        })
-
-        $('#9').on('click', function(event) {
-
-            event.preventDefault();
-
-            var descr = grounds[9].description;
-            localStorage.setItem('descriptions', descr);
-    
-            window.open("campground.html");
-        
-        
-        })
-
-        $('#10').on('click', function(event) {
-
-            event.preventDefault();
-
-            var descr = grounds[10].description;
-            localStorage.setItem('descriptions', descr);
-    
-            window.open("campground.html");
-        
-        
-        })
     
     })
 
