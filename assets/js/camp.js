@@ -11,7 +11,10 @@ campNameEl.textContent = localStorage.getItem('name');
 
 var getActivities = function(input) {
     //URl request
-    var npsApi = "https://cors-anywhere.herokuapp.com/https://developer.nps.gov/api/v1/activities?parkCode="+ input +"&api_key=16qnixGPCRxcuKRsBRxu9yl0P6xo3CbdECaehB9V&limit=15"
+
+    var npsApi = "https://cors-anywhere.herokuapp.com/https://developer.nps.gov/api/v1/activities?parkCode="+ input +"&api_key=16qnixGPCRxcuKRsBRxu9yl0P6xo3CbdECaehB9V&limit=15";
+
+   
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -25,13 +28,35 @@ var getActivities = function(input) {
         //make URL request  
     fetch(npsApi,requestOptions).then(function(response){
         response.json().then(function(data){
-            console.log(data);
             displayactivityResults(data);
         });
     
     });
 };
-//Activities Fetch
+
+
+
+var displayactivityResults = function(info) {
+    var activities= info.data;
+    console.log(activities);
+    var activityArr = [];
+     for (var i=0; i<20; i++){
+         var randomActivity = activities[Math.floor(Math.random() *activities.length)]
+            activityArr.push(randomActivity.name)
+    }  
+    let activitySet = [...new Set(activityArr)];
+    for (var j = 0; j < 10; j++) {
+        $("#activ-list")
+            .append(
+                `<div class="list-activities-item">
+                    ${activitySet[j]}
+                </div>`
+            )
+    }
+};
+
+
+// Function to call Air Visual API
 var displayactivityResults = function(info) {
     var activities= info.data;
     console.log(activities);
@@ -62,7 +87,9 @@ var getAqi = function(input) {
 
 };
 
-//Acitivities Fetch
+
+
+// AQI Results
 var displayaqiResults = function(info) {
     var aqiCity = info.data.city;
     var aqiState =info.data.state;
